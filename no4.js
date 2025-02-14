@@ -4,7 +4,7 @@ function transformSentence(sentence) {
     sortSentence = sentence.split(" ").sort().reverse()
     console.log(sortSentence)
     // 4b
-    capitalizeSentence = sortSentence.map((el) => el.toUpperCase)
+    capitalizeSentence = sortSentence.map((el) => {el.toUpperCase()})
     console.log(capitalizeSentence)
     // 4c
     arrSentence = sortSentence
