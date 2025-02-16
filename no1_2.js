@@ -12,6 +12,10 @@ let movie = {
             name: "Zendaya",
             role: "MJ",
         },
+        {
+            name: "Robert Downey Jr",
+            role: "Iron Man"
+        }
     ],
     getTitleImageGenre: function() {
         console.log(`Title: ${this.title}`)
@@ -19,7 +23,10 @@ let movie = {
         console.log(`Genre: ${this.genre}`)
     },
     getCast: function() {
-        console.log(`Cast: ${this.cast}`)
+        this.cast.sort((a,b) => a.name > b.name ? 1 : (a.name < b.name ? -1 : 0))
+        this.cast.forEach(actor => {
+            console.log(`Cast name: ${actor.name}, Role: ${actor.role}`)
+        })
     },
     changeTitle: function(newTitle) {
         if(typeof newTitle !== 'string') return
